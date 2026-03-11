@@ -9,7 +9,7 @@ import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const waitlistSchema = z.object({
-  email: z.email("Please enter a valid email address."),
+  email: z.string().email("Please enter a valid email address."),
 });
 
 type WaitlistValues = z.infer<typeof waitlistSchema>;
