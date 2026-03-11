@@ -2,8 +2,6 @@
 
 A modern, high-performance waitlist landing page built with **Next.js 16**, **React 19**, and **Tailwind CSS 4**. This project features a sophisticated dark-mode aesthetic with glassmorphism effects and interactive particle backgrounds.
 
-![Screenshot of the landing page](https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80&w=1200)
-
 ## 🚀 Key Features
 
 - **Interactive Background**: Custom HTML5 Canvas particle system that responds to mouse movement.
@@ -34,17 +32,20 @@ A modern, high-performance waitlist landing page built with **Next.js 16**, **Re
 ### Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/guidoFortunato/personal-website.git
    cd website
    ```
 
 2. **Install dependencies:**
+
    ```bash
    pnpm install
    ```
 
 3. **Run the development server:**
+
    ```bash
    pnpm dev
    ```
