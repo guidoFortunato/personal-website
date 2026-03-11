@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Join the Waitlist | Personal Project</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          animation: {
+            'shimmer': 'shimmer 2s linear infinite',
+          },
+          keyframes: {
+            shimmer: {
+              from: { backgroundPosition: '0 0' },
+              to: { backgroundPosition: '-200% 0' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+<style data-purpose="background-animations">
+    /* Subtle background grain and gradient */
+    body {
+      background-color: #030303;
+      overflow: hidden;
+    }
+    .bg-gradient-mesh {
+      background-image: 
+        radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+        radial-gradient(at 50% 0%, hsla(225,39%,30%,0.1) 0, transparent 50%), 
+        radial-gradient(at 100% 0%, hsla(339,49%,30%,0.1) 0, transparent 50%);
+    }
+    
+    /* Particles Canvas Styling */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    /* Glassmorphism Refinement */
+    .glass-card {
+      background: rgba(17, 17, 17, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+<style data-purpose="toast-notifications">
+    .toast {
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 100;
+    }
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="text-slate-200 font-sans antialiased min-h-screen">
+<!-- BEGIN: Interactive Background -->
+<div id="particles-js"></div>
+<div class="fixed inset-0 bg-gradient-mesh pointer-events-none"></div>
+<!-- END: Interactive Background -->
+<!-- BEGIN: Main Hero Section -->
+<main class="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
+<!-- BEGIN: Waitlist Card -->
+<section class="glass-card w-full max-w-md p-8 md:p-10 rounded-3xl transition-all duration-500 hover:border-white/20" data-purpose="waitlist-card">
+<div class="space-y-6">
+<!-- Header Text -->
+<div class="text-center space-y-2">
+<h1 class="text-3xl font-semibold tracking-tight text-white">
+            Join the waitlist
+          </h1>
+<p class="text-slate-400 text-sm leading-relaxed">
+            Leave your email and I'll notify you when the project launches.
+          </p>
+</div>
+<!-- Subscription Form -->
+<form class="space-y-4" id="waitlist-form" onsubmit="return false;">
+<div class="space-y-1">
+<label class="sr-only" for="email">Email address</label>
+<input class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-200" id="email" name="email" placeholder="Enter your email" required="" type="email"/>
+<!-- Error message placeholder -->
+<p class="hidden text-red-400 text-xs mt-1 ml-1" id="email-error">Please enter a valid email address.</p>
+</div>
+<button class="w-full bg-white text-black font-medium py-3 rounded-xl hover:bg-slate-200 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed" id="submit-btn" type="submit">
+<span>Send</span>
+<!-- Loading Spinner (Hidden by default) -->
+<svg class="hidden animate-spin h-4 w-4 text-black" fill="none" id="loading-spinner" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+</button>
+</form>
+</div>
+</section>
+<!-- END: Waitlist Card -->
+<!-- BEGIN: Component States Visualization (Hidden Helpers) -->
+<!-- These elements are purely to showcase the requested UI states via manual toggle in dev/demo -->
+<div class="mt-8 flex gap-4 opacity-30 hover:opacity-100 transition-opacity">
+<button class="text-xs border border-white/10 px-2 py-1 rounded" onclick="toggleError()">Simulate Error</button>
+<button class="text-xs border border-white/10 px-2 py-1 rounded" onclick="showToast('success')">Simulate Success</button>
+</div>
+<!-- END: Component States Visualization -->
+</main>
+<!-- END: Main Hero Section -->
+<!-- BEGIN: Toast Notifications -->
+<div class="toast flex items-center gap-3 bg-white text-black px-6 py-4 rounded-2xl shadow-2xl" id="toast-success">
+<svg class="w-5 h-5 text-green-600" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+<span class="text-sm font-medium">Email sent successfully</span>
+</div>
+<div class="toast flex items-center gap-3 bg-red-500 text-white px-6 py-4 rounded-2xl shadow-2xl" id="toast-error">
+<svg class="w-5 h-5 text-white" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" fill-rule="evenodd"></path></svg>
+<span class="text-sm font-medium">Something went wrong</span>
+</div>
+<!-- END: Toast Notifications -->
+<!-- BEGIN: Scripts -->
+<!-- Particles.js Library -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script data-purpose="particles-init">
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.2, "random": true },
+        "size": { "value": 1.5, "random": true },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.05, "width": 1 },
+        "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "straight": false, "out_mode": "out" }
+      },
+      "interactivity": {
+        "events": { "onhover": { "enable": true, "mode": "bubble" } },
+        "modes": { "bubble": { "distance": 200, "size": 3, "duration": 2, "opacity": 0.4, "speed": 3 } }
+      },
+      "retina_detect": true
+    });
+  </script>
+<script data-purpose="form-logic">
+    const form = document.getElementById('waitlist-form');
+    const input = document.getElementById('email');
+    const errorMsg = document.getElementById('email-error');
+    const submitBtn = document.getElementById('submit-btn');
+    const spinner = document.getElementById('loading-spinner');
+
+    function toggleError() {
+      input.classList.toggle('border-red-500');
+      input.classList.toggle('ring-red-500/20');
+      errorMsg.classList.toggle('hidden');
+    }
+
+    function showToast(type) {
+      const toast = document.getElementById(`toast-${type}`);
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Basic Loading State Simulation
+      submitBtn.disabled = true;
+      spinner.classList.remove('hidden');
+      submitBtn.querySelector('span').innerText = 'Processing...';
+
+      // Simulate API call
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        spinner.classList.add('hidden');
+        submitBtn.querySelector('span').innerText = 'Send';
+        
+        if (input.value.includes('error')) {
+          toggleError();
+          showToast('error');
+        } else {
+          showToast('success');
+          input.value = '';
+          input.classList.add('border-green-500');
+          setTimeout(() => input.classList.remove('border-green-500'), 2000);
+        }
+      }, 1500);
+    });
+  </script>
+<!-- END: Scripts -->
+</body></html>
