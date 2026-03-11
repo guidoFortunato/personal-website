@@ -11,9 +11,9 @@ interface Particle {
   opacity: number;
 }
 
-const PARTICLE_COUNT = 80;
-const LINE_DISTANCE = 150;
-const LINE_OPACITY = 0.05;
+const PARTICLE_COUNT = 150;
+const LINE_DISTANCE = 130;
+const LINE_OPACITY = 0.03;
 const BUBBLE_DISTANCE = 200;
 const BUBBLE_SIZE = 3;
 const BUBBLE_OPACITY = 0.4;

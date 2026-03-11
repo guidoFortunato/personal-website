@@ -2,31 +2,40 @@
 
 import { useState } from "react";
 import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const emailSchema = z.string().email("Please enter a valid email address.");
+const waitlistSchema = z.object({
+  email: z.email("Please enter a valid email address."),
+});
+
+type WaitlistValues = z.infer<typeof waitlistSchema>;
 
 export default function WaitlistForm() {
-  const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<WaitlistValues>({
+    resolver: zodResolver(waitlistSchema),
+    defaultValues: {
+      email: "",
+    },
+  });
 
-    const result = emailSchema.safeParse(email);
-    if (!result.success) {
-      toast.error(result.error.issues[0].message);
-      return;
-    }
-
+  const onSubmit = async (data: WaitlistValues) => {
     try {
       setLoading(true);
       // Simulation of API call
       await new Promise((resolve) => setTimeout(resolve, 1500));
       toast.success("Welcome! You've been added to the waitlist.");
-      setEmail("");
+      reset();
     } catch {
       toast.error("Something went wrong. Please try again.");
     } finally {
@@ -34,20 +43,24 @@ export default function WaitlistForm() {
     }
   };
 
+  // Trigger toast for validation errors if they exist and are new
+  const onError = () => {
+    if (errors.email) {
+      toast.error(errors.email.message);
+    }
+  };
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit(onSubmit, onError)} className="space-y-4">
       <div className="space-y-2">
         <label htmlFor="email" className="sr-only">
           Email address
         </label>
         <input
+          {...register("email")}
           id="email"
-          name="email"
           type="email"
           placeholder="Enter your email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
           className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-200"
         />
       </div>

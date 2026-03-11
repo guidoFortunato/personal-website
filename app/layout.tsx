@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Geist } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en" className={cn("dark", "font-sans", geist.variable)}>
       <body className={`${inter.className} antialiased`}>
         {children}
-        <Toaster position="bottom-right" theme="dark" closeButton richColors />
+        <Toaster position="top-right" theme="dark" richColors />
       </body>
     </html>
   );
