@@ -5,7 +5,7 @@ Landing en modo oscuro para captar consultas de clientes: formulario de proyecto
 ## Características
 
 - **Formulario de consulta**: nombre, email, confirmación de email, tipo de proyecto (select) y descripción. Validación con Zod y React Hook Form.
-- **Supabase**: envío a la tabla `client_leads`. Detección de email duplicado (error 23505 / 409) con toast específico.
+- **Supabase**: envío a la tabla `client`. Detección de email duplicado (error 23505 / 409) con toast específico.
 - **Internacionalización**: [next-intl](https://next-intl.dev/) con rutas por locale (`/` y `/en`). Dropdown de idioma en el header.
 - **UI**: fondo con partículas, card con efecto glass, toasts con Sonner, componentes [shadcn/ui](https://ui.shadcn.com/).
 - **Responsive**: layout adaptable, safe area en móvil, scroll en landscape.
@@ -84,7 +84,7 @@ pnpm lint   # ESLint
 
 ## Base de datos (Supabase)
 
-La tabla `client_leads` tiene:
+La tabla `client` tiene:
 
 - `id` (uuid, PK)
 - `full_name`, `email` (UNIQUE), `project_type`, `project_description`

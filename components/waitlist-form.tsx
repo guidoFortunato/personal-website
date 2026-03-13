@@ -69,7 +69,7 @@ export default function WaitlistForm() {
       setLoading(true);
 
       const { error: insertError } = await supabase
-        .from("client_leads")
+        .from("client")
         .insert({
           full_name: data.full_name,
           email: data.email,
