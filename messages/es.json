@@ -13,7 +13,7 @@
     "projectTypeEcommerce": "Tienda online (E-commerce)",
     "projectTypeWebsite": "Página web",
     "projectTypeLanding": "Landing page",
-    "projectTypeMobile": "Aplicación móvil",
+    "projectTypeWebApp": "Aplicación web",
     "projectTypeOther": "Otro",
     "projectDescription": "Descripción del proyecto",
     "projectDescriptionPlaceholder": "Contanos más sobre tu proyecto...",

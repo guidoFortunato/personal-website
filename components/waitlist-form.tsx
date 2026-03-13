@@ -13,7 +13,7 @@ import { supabase } from "@/lib/supabase";
 const PROJECT_TYPE_VALUES = [
   "ecommerce",
   "website",
-  "landing",
+  "landing_page",
   "mobile_app",
   "other",
 ] as const;
@@ -69,13 +69,14 @@ export default function WaitlistForm() {
       setLoading(true);
 
       const { error: insertError } = await supabase
-        .from("client")
+        .from("clients")
         .insert({
           full_name: data.full_name,
           email: data.email,
           project_type: data.project_type,
           project_description: data.project_description,
         });
+
 
       if (insertError) {
         // 23505 = unique_violation: el email ya existe en la tabla
@@ -89,7 +90,8 @@ export default function WaitlistForm() {
 
       toast.success(t("Toasts.success"));
       reset();
-    } catch {
+    } catch (error) {
+      console.log({ error });
       toast.error(t("Toasts.error"));
     } finally {
       setLoading(false);
@@ -159,8 +161,8 @@ export default function WaitlistForm() {
           <option value="">{t("Form.projectTypePlaceholder")}</option>
           <option value="ecommerce">{t("Form.projectTypeEcommerce")}</option>
           <option value="website">{t("Form.projectTypeWebsite")}</option>
-          <option value="landing">{t("Form.projectTypeLanding")}</option>
-          <option value="mobile_app">{t("Form.projectTypeMobile")}</option>
+          <option value="landing_page">{t("Form.projectTypeLanding")}</option>
+          <option value="mobile_app">{t("Form.projectTypeWebApp")}</option>
           <option value="other">{t("Form.projectTypeOther")}</option>
         </select>
       </div>

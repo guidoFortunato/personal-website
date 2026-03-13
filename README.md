@@ -12,14 +12,14 @@ Landing en modo oscuro para captar consultas de clientes: formulario de proyecto
 
 ## Stack
 
-| Área        | Tecnología |
-|------------|------------|
-| Framework  | Next.js 16 (App Router), React 19 |
-| Estilos    | Tailwind CSS 4 |
+| Área       | Tecnología                                |
+| ---------- | ----------------------------------------- |
+| Framework  | Next.js 16 (App Router), React 19         |
+| Estilos    | Tailwind CSS 4                            |
 | Formulario | React Hook Form, Zod, @hookform/resolvers |
-| Backend    | Supabase (`@supabase/supabase-js`) |
-| i18n       | next-intl |
-| UI         | shadcn/ui, Lucide, Sonner |
+| Backend    | Supabase (`@supabase/supabase-js`)        |
+| i18n       | next-intl                                 |
+| UI         | shadcn/ui, Lucide, Sonner                 |
 
 ## Requisitos
 
@@ -84,7 +84,7 @@ pnpm lint   # ESLint
 
 ## Base de datos (Supabase)
 
-La tabla `client` tiene:
+La tabla `clients` tiene:
 
 - `id` (uuid, PK)
 - `full_name`, `email` (UNIQUE), `project_type`, `project_description`

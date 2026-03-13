@@ -13,7 +13,7 @@
     "projectTypeEcommerce": "Online store (E-commerce)",
     "projectTypeWebsite": "Website",
     "projectTypeLanding": "Landing page",
-    "projectTypeMobile": "Mobile app",
+    "projectTypeWebApp": "Web application",
     "projectTypeOther": "Other",
     "projectDescription": "Project description",
     "projectDescriptionPlaceholder": "Tell us more about your project...",
