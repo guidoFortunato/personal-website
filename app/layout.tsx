@@ -13,9 +13,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Join the Waitlist | Personal Project",
+  title: "Empieza tu proyecto",
   description:
-    "Leave your email and I'll notify you when the project launches.",
+    "Comparte los detalles de tu proyecto y te ayudaremos a convertir tu idea en una solución digital.",
 };
 
 export default function RootLayout({

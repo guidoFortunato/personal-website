@@ -1,0 +1,42 @@
+{
+  "Form": {
+    "title": "Tu proyecto",
+    "description": "Revisaremos tu idea y nos pondremos en contacto contigo pronto.",
+    "fullName": "Nombre completo",
+    "fullNamePlaceholder": "Nombre completo",
+    "email": "Email",
+    "emailPlaceholder": "Email",
+    "confirmEmail": "Confirmar email",
+    "confirmEmailPlaceholder": "Confirmar email",
+    "projectType": "Tipo de proyecto",
+    "projectTypePlaceholder": "Seleccioná el tipo de proyecto",
+    "projectTypeEcommerce": "Tienda online (E-commerce)",
+    "projectTypeWebsite": "Página web",
+    "projectTypeLanding": "Landing page",
+    "projectTypeMobile": "Aplicación móvil",
+    "projectTypeOther": "Otro",
+    "projectDescription": "Descripción del proyecto",
+    "projectDescriptionPlaceholder": "Contanos más sobre tu proyecto...",
+    "submit": "Enviar proyecto",
+    "submitting": "Enviando..."
+  },
+  "Toasts": {
+    "emailAlreadyRegistered": "Este email ya se encuentra registrado",
+    "success": "Gracias! Tu proyecto fue enviado correctamente.",
+    "error": "Ocurrió un error. Por favor intentá de nuevo."
+  },
+  "Validation": {
+    "fullNameMin": "El nombre debe tener al menos 2 caracteres.",
+    "emailInvalid": "Ingresá un email válido.",
+    "emailsNoMatch": "Los emails no coinciden.",
+    "projectTypeRequired": "Seleccioná un tipo de proyecto.",
+    "projectDescriptionMin": "La descripción debe tener al menos 10 caracteres."
+  },
+  "Header": {
+    "language": "Idioma"
+  },
+  "Locale": {
+    "es": "Español",
+    "en": "English"
+  }
+}
