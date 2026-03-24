@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { z } from "zod";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
+import { Loader2, ChevronDown, Check } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/lib/supabase";
@@ -43,15 +43,26 @@ type WaitlistValues = z.infer<
   ReturnType<typeof createWaitlistSchema>
 >;
 
+const PROJECT_TYPE_OPTIONS = [
+  { value: "ecommerce", labelKey: "Form.projectTypeEcommerce" },
+  { value: "website", labelKey: "Form.projectTypeWebsite" },
+  { value: "landing_page", labelKey: "Form.projectTypeLanding" },
+  { value: "mobile_app", labelKey: "Form.projectTypeWebApp" },
+  { value: "other", labelKey: "Form.projectTypeOther" },
+] as const;
+
 export default function WaitlistForm() {
   const t = useTranslations();
   const [loading, setLoading] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const waitlistSchema = createWaitlistSchema(t);
 
   const {
     register,
     handleSubmit,
     reset,
+    control,
     formState: { errors },
   } = useForm<WaitlistValues>({
     resolver: zodResolver(waitlistSchema),
@@ -63,6 +74,16 @@ export default function WaitlistForm() {
       project_description: "",
     },
   });
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const onSubmit = async (data: WaitlistValues) => {
     try {
@@ -149,22 +170,56 @@ export default function WaitlistForm() {
         />
       </div>
 
-      <div>
+      <div ref={dropdownRef} className="relative">
         <label htmlFor="project_type" className="sr-only">
           {t("Form.projectType")}
         </label>
-        <select
-          {...register("project_type")}
-          id="project_type"
-          className={`${inputClass} appearance-none cursor-pointer [&>option]:bg-[#0a0a0a] [&>option]:text-white`}
-        >
-          <option value="">{t("Form.projectTypePlaceholder")}</option>
-          <option value="ecommerce">{t("Form.projectTypeEcommerce")}</option>
-          <option value="website">{t("Form.projectTypeWebsite")}</option>
-          <option value="landing_page">{t("Form.projectTypeLanding")}</option>
-          <option value="mobile_app">{t("Form.projectTypeWebApp")}</option>
-          <option value="other">{t("Form.projectTypeOther")}</option>
-        </select>
+        <Controller
+          name="project_type"
+          control={control}
+          render={({ field }) => {
+            const selected = PROJECT_TYPE_OPTIONS.find((o) => o.value === field.value);
+            return (
+              <>
+                <button
+                  id="project_type"
+                  type="button"
+                  onClick={() => setDropdownOpen((prev) => !prev)}
+                  className={`${inputClass} flex items-center justify-between cursor-pointer`}
+                >
+                  <span className={selected ? "text-white" : "text-slate-500"}>
+                    {selected ? t(selected.labelKey) : t("Form.projectTypePlaceholder")}
+                  </span>
+                  <ChevronDown
+                    className={`h-4 w-4 text-slate-400 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+
+                {dropdownOpen && (
+                  <ul className="absolute z-10 mt-2 w-full rounded-xl border border-white/10 bg-[#0f0f0f] py-1 shadow-xl">
+                    {PROJECT_TYPE_OPTIONS.map((option) => (
+                      <li key={option.value}>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            field.onChange(option.value);
+                            setDropdownOpen(false);
+                          }}
+                          className="flex w-full items-center justify-between px-4 py-2.5 text-sm text-slate-300 hover:bg-white/5 hover:text-white transition-colors duration-150 cursor-pointer"
+                        >
+                          {t(option.labelKey)}
+                          {field.value === option.value && (
+                            <Check className="h-4 w-4 text-blue-400" />
+                          )}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </>
+            );
+          }}
+        />
       </div>
 
       <div>
