@@ -1,109 +1,134 @@
-# Checklist: Next.js Best Practices for a Personal Website
+# SteelClover Frontend Rules (Next.js)
 
-## 🚀 1. Performance and Loading
+## Core Principles
 
-- **Static Rendering:** The landing page should be statically rendered to achieve instant loading.
-- **Lightweight Components:** Keep the page as lightweight as possible. Load only the necessary JavaScript.
-- **Lazy Loading:** The particle animation should be loaded lazily so it does not block the initial render.
-- **Resource Optimization:** Minimize external scripts and avoid heavy dependencies.
+- Always prioritize SSR and Server Components
+- Minimize client-side JavaScript
+- Build fast, accessible, SEO-friendly UI
+- Keep design minimal, premium, and conversion-focused
+- Avoid unnecessary complexity
 
 ---
 
-## 🎨 2. UI and User Experience (UX)
+## Rendering Rules
 
-- **Minimalist Design:** Modern, clean, and premium interface.
-- **Centered Form:** The email form must be perfectly centered on the screen.
-- **Clear Visual Hierarchy:**
+- Default to Server Components
+- Only use 'use client' when strictly required:
+  - forms
+  - interactive UI (menu, accordion)
+  - animations if necessary
+- Never convert entire pages to client components without reason
+
+---
+
+## Performance Rules
+
+- No heavy libraries unless justified
+- Use next/image for images
+- Lazy load non-critical components
+- Keep bundle size minimal
+- Avoid unnecessary re-renders
+
+---
+
+## SEO Rules
+
+- Every page must include:
   - title
-  - subtitle
-  - email input
-  - submit button
-- **Micro-interactions:**
-  - button hover animation
-  - input focus animation
-  - smooth transitions for toast notifications
-- **Animated Background:** Subtle animated particles that react to mouse movement.
+  - meta description
+- Use semantic HTML (header, main, section, footer)
+- Only one <h1> per page
+- Maintain proper heading hierarchy
+- All images must include alt text
 
 ---
 
-## 🏗️ 3. Next.js Architecture (App Router)
+## Responsive Rules
 
-- **Server Components (RSC):** Use Server Components by default to reduce client-side JavaScript.
-- **Client Components (`'use client'`):** Only for:
-  - email form
-  - particle animation
-  - toast notifications
-  <!-- * **Server Actions:** Use them to securely send the email to Supabase. -->
-
----
-
-## 📬 4. Email Form
-
-- **Email input:** With a clear placeholder.
-- **Validation with Zod:** Validate the email format before submitting.
-- **Form states:**
-  - default
-  - focus
-  - error
-  - success
-- **User feedback:** Show toast notifications after form submission.
-
-Expected messages:
-
-Success:  
-Email sent successfully
-
-Error:  
-Something went wrong
+- Mobile-first approach
+- No horizontal overflow
+- Use flexible layouts (flex/grid)
+- Ensure readable typography
+- Buttons must be touch-friendly
 
 ---
 
-## 💡 5. Core Functionality
+## UI Rules
 
-The main functionality of the site is to capture emails.
-
-Expected flow:
-
-1. User enters their email
-2. Validation with Zod
-   <!-- 3. If valid, send it to Supabase -->
-   <!-- 4. Store it in the database -->
-3. Show a success or error toast notification
+- Minimalist, clean, premium design
+- Consistent spacing system
+- Avoid visual clutter
+- Use subtle animations only
+- Clear CTA hierarchy
 
 ---
 
-## 🎯 6. Design Based on Reference
+## Component Rules
 
-The interface must be implemented following the design located in:
-
-`resources/home-screen`
-
-This directory contains the visual reference generated previously.
-
-Rules:
-
-- Replicate the design as faithfully as possible
-- Do not add new sections
-- Do not modify the layout unnecessarily
+- Components must be:
+  - reusable
+  - small
+  - focused
+- Avoid deeply nested structures
+- Keep props simple and typed
 
 ---
 
-## 🛡️ 7. Security
+## Code Quality Rules
 
-- **Strict validation:** Use Zod to validate the email.
-<!-- * **Spam prevention:** Properly handle errors when sending data to Supabase. -->
-- **Input sanitization:** Ensure the input only accepts valid email addresses.
+- Use TypeScript everywhere
+- Clear naming conventions
+- Avoid magic values
+- Keep files clean and readable
+- Separate logic from UI when needed
 
 ---
 
-## 🎯 Final Goal
+## Accessibility Rules
 
-Implement a minimal landing page for a personal website that:
+- Keyboard navigation required
+- Visible focus states
+- Proper labels for inputs
+- Good color contrast
 
-- replicates the design in `resources/home-screen`
-- allows users to enter an email
-- validates the email with Zod
-<!-- - stores it in Supabase -->
-- shows feedback using toast notifications
+---
 
-For now, do not implement any Supabase integration; focus only on the frontend UI and form interactions.
+## Security Rules
+
+- Validate all inputs
+- Do not trust client-only validation
+- Sanitize user input
+- Do not expose sensitive data
+
+---
+
+## Conversion Rules
+
+- Always include a clear CTA
+- Above-the-fold must explain:
+  - what we do
+  - who it's for
+  - why it matters
+- Keep user flow simple
+- Reduce friction in forms
+
+---
+
+## Visual Identity Rules
+
+- Dark premium UI preferred
+- Use green accent carefully
+- Strong typography
+- Clean layout with whitespace
+- Avoid generic template look
+
+---
+
+## Anti-Patterns (DO NOT)
+
+- Do not overuse 'use client'
+- Do not add unnecessary animations
+- Do not use heavy UI frameworks
+- Do not clutter the UI
+- Do not break responsive layout
+- Do not ignore SEO basics

@@ -1,4 +1,89 @@
 {
+  "Nav": {
+    "home": "Home",
+    "services": "Services",
+    "process": "Process",
+    "projects": "Projects",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cta": "Request a quote"
+  },
+  "Hero": {
+    "badge": "Digital Development Studio",
+    "title1": "We build websites that turn ",
+    "titleAccent1": "ideas",
+    "titleMid": " into ",
+    "titleAccent2": "results",
+    "description": "We create high-performance digital experiences by merging minimalist design with cutting-edge technology to scale your business to the next level.",
+    "ctaPrimary": "Request a quote",
+    "ctaSecondary": "View projects"
+  },
+  "Services": {
+    "title": "Specialized Services",
+    "description": "We offer robust and aesthetically superior technical solutions for every stage of digital growth.",
+    "websitesTitle": "Corporate Websites",
+    "websitesDesc": "Solid, scalable structures that communicate your brand's authority with technological precision.",
+    "landingTitle": "Landing Pages",
+    "landingDesc": "Designed with neuromarketing principles to maximize conversion rates and return on investment.",
+    "ecommerceTitle": "Ecommerce",
+    "ecommerceDesc": "Online sales ecosystems optimized for a smooth and secure user experience."
+  },
+  "WhyUs": {
+    "title": "Why choose us",
+    "designTitle": "Custom modern design",
+    "designDesc": "We don't use templates. Every pixel is designed from scratch to reflect your business's unique identity.",
+    "speedTitle": "Fast websites",
+    "speedDesc": "Extreme speed optimization and technical SEO.",
+    "responsiveTitle": "Responsive development",
+    "responsiveDesc": "Your site will look flawless on any device, from mobile phones to ultra-wide monitors.",
+    "conversionTitle": "Conversion-focused",
+    "conversionDesc": "We turn visitors into loyal customers through strategically planned user flows."
+  },
+  "Process": {
+    "title": "Our Process",
+    "step1Title": "Discovery",
+    "step1Desc": "We analyze your goals, competition, and audience to map out the project's success path.",
+    "step2Title": "Design",
+    "step2Desc": "We create high-fidelity wireframes and visual prototypes focused on aesthetics and usability.",
+    "step3Title": "Development",
+    "step3Desc": "We code the solution with the most modern technologies, ensuring speed and security.",
+    "step4Title": "Launch",
+    "step4Desc": "Final quality testing and project launch under expert supervision."
+  },
+  "Projects": {
+    "title": "Selected Projects",
+    "viewAll": "View full portfolio",
+    "project1Name": "Nova Studio",
+    "project1Type": "Brand Architecture & Web",
+    "project2Name": "Pulse Launch",
+    "project2Type": "SaaS Dashboard & UI Design",
+    "project3Name": "Urban Cart",
+    "project3Type": "High-End Ecommerce"
+  },
+  "FAQ": {
+    "title": "Frequently Asked Questions",
+    "q1": "What type of websites do you develop?",
+    "a1": "We specialize in corporate websites, high-conversion landing pages, ecommerce, and custom web applications. All under an exclusive design approach and optimized performance.",
+    "q2": "Is the website mobile-friendly?",
+    "a2": "Absolutely. We apply a \"Mobile First\" approach ensuring the user experience is perfect on smartphones, tablets, and desktop computers.",
+    "q3": "How long does a project take?",
+    "a3": "The timeline depends on complexity. A landing page can be ready in 2 weeks, while a robust corporate website usually takes 4 to 6 weeks.",
+    "q4": "Do you offer post-launch maintenance?",
+    "a4": "Yes, we have monthly support plans to ensure your website is always updated, secure, and running at 100% capacity."
+  },
+  "Contact": {
+    "title": "Ready to take your project to the next level?",
+    "description": "We're ready to transform your ideas into a dominant digital presence."
+  },
+  "Footer": {
+    "tagline": "Digital design and development studio focused on creating products that define the future of brands.",
+    "navTitle": "Navigation",
+    "legalTitle": "Legal",
+    "socialTitle": "Social",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "copyright": "Digital Design & Development Studio."
+  },
   "Form": {
     "title": "Your project",
     "description": "We will review your idea and get in touch with you soon.",

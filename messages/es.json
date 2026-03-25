@@ -1,4 +1,89 @@
 {
+  "Nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "process": "Proceso",
+    "projects": "Proyectos",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "cta": "Solicitar presupuesto"
+  },
+  "Hero": {
+    "badge": "Studio de Desarrollo Digital",
+    "title1": "Desarrollamos sitios web que convierten ",
+    "titleAccent1": "ideas",
+    "titleMid": " en ",
+    "titleAccent2": "resultados",
+    "description": "Creamos experiencias digitales de alto rendimiento fusionando un diseño minimalista con tecnología de vanguardia para escalar tu negocio al siguiente nivel.",
+    "ctaPrimary": "Solicitar presupuesto",
+    "ctaSecondary": "Ver proyectos"
+  },
+  "Services": {
+    "title": "Servicios Especializados",
+    "description": "Ofrecemos soluciones técnicas robustas y estéticamente superiores para cada etapa del crecimiento digital.",
+    "websitesTitle": "Sitios Web Corporativos",
+    "websitesDesc": "Estructuras sólidas y escalables que comunican la autoridad de tu marca con precisión tecnológica.",
+    "landingTitle": "Landing Pages",
+    "landingDesc": "Diseñadas bajo principios de neuromarketing para maximizar la tasa de conversión y el retorno de inversión.",
+    "ecommerceTitle": "Ecommerce",
+    "ecommerceDesc": "Ecosistemas de venta online optimizados para una experiencia de usuario fluida y segura."
+  },
+  "WhyUs": {
+    "title": "Por qué elegirnos",
+    "designTitle": "Diseño moderno y a medida",
+    "designDesc": "No usamos plantillas. Cada pixel se diseña desde cero para reflejar la identidad única de tu negocio.",
+    "speedTitle": "Webs rápidas",
+    "speedDesc": "Optimización extrema de velocidad y SEO técnico.",
+    "responsiveTitle": "Desarrollo responsive",
+    "responsiveDesc": "Tu sitio se verá impecable en cualquier dispositivo, desde móviles hasta ultra-wide monitors.",
+    "conversionTitle": "Enfoque en conversión",
+    "conversionDesc": "Convertimos las visitas en clientes leales mediante flujos de usuario estratégicamente planeados."
+  },
+  "Process": {
+    "title": "Nuestro Proceso",
+    "step1Title": "Descubrimiento",
+    "step1Desc": "Analizamos tus objetivos, competencia y audiencia para trazar el mapa de éxito del proyecto.",
+    "step2Title": "Diseño",
+    "step2Desc": "Creamos wireframes y prototipos visuales de alta fidelidad centrados en la estética y usabilidad.",
+    "step3Title": "Desarrollo",
+    "step3Desc": "Codificamos la solución con las tecnologías más modernas, asegurando velocidad y seguridad.",
+    "step4Title": "Lanzamiento",
+    "step4Desc": "Pruebas finales de calidad y puesta en marcha del proyecto bajo supervisión experta."
+  },
+  "Projects": {
+    "title": "Proyectos Seleccionados",
+    "viewAll": "Ver todo el portafolio",
+    "project1Name": "Nova Studio",
+    "project1Type": "Arquitectura de Marca & Web",
+    "project2Name": "Pulse Launch",
+    "project2Type": "SaaS Dashboard & UI Design",
+    "project3Name": "Urban Cart",
+    "project3Type": "Ecommerce High-End"
+  },
+  "FAQ": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Qué tipo de webs desarrollan?",
+    "a1": "Nos especializamos en sitios corporativos, landing pages de alta conversión, ecommerce y aplicaciones web a medida. Todo bajo un enfoque de diseño exclusivo y rendimiento optimizado.",
+    "q2": "¿La web se adapta a celulares?",
+    "a2": "Absolutamente. Aplicamos un enfoque \"Mobile First\" garantizando que la experiencia de usuario sea perfecta en smartphones, tablets y computadoras de escritorio.",
+    "q3": "¿Cuánto tarda un proyecto?",
+    "a3": "El tiempo depende de la complejidad. Una landing page puede estar lista en 2 semanas, mientras que un sitio corporativo robusto suele tardar entre 4 a 6 semanas.",
+    "q4": "¿Ofrecen mantenimiento post-lanzamiento?",
+    "a4": "Sí, contamos con planes de soporte mensual para asegurar que tu web esté siempre actualizada, segura y funcionando al 100% de su capacidad."
+  },
+  "Contact": {
+    "title": "¿Listo para llevar tu proyecto al siguiente nivel?",
+    "description": "Estamos listos para transformar tus ideas en una presencia digital dominante."
+  },
+  "Footer": {
+    "tagline": "Studio de diseño y desarrollo digital enfocado en crear productos que definen el futuro de las marcas.",
+    "navTitle": "Navegación",
+    "legalTitle": "Legal",
+    "socialTitle": "Social",
+    "terms": "Términos",
+    "privacy": "Privacidad",
+    "copyright": "Studio de Diseño y Desarrollo Digital."
+  },
   "Form": {
     "title": "Tu proyecto",
     "description": "Revisaremos tu idea y nos pondremos en contacto contigo pronto.",
