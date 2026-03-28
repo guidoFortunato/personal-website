@@ -1,3 +1,4 @@
+// import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 
 export default async function Hero() {
@@ -25,20 +26,20 @@ export default async function Hero() {
           <p className="text-sc-on-surface-variant text-lg md:text-xl max-w-2xl mb-12 leading-relaxed">
             {t("Hero.description")}
           </p>
-          <div className="flex flex-col sm:flex-row gap-6">
-            <a
+          {/* <div className="flex flex-col sm:flex-row gap-6">
+            <Link
               href="#contacto"
               className="text-center bg-sc-green text-sc-on-green px-10 py-5 rounded-xl font-bold text-lg hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_10px_30px_rgba(97,249,177,0.2)]"
             >
               {t("Hero.ctaPrimary")}
-            </a>
-            <a
+            </Link>
+            <Link
               href="#proyectos"
               className="text-center bg-sc-surface-high text-sc-green px-10 py-5 rounded-xl font-bold text-lg hover:bg-sc-surface-highest transition-all duration-300"
             >
               {t("Hero.ctaSecondary")}
-            </a>
-          </div>
+            </Link>
+          </div> */}
         </div>
       </div>
     </section>

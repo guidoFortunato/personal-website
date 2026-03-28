@@ -1,10 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import {
-  Building2,
-  Zap,
-  Smartphone,
-  ShieldCheck,
-} from "lucide-react";
+import { Building2, Zap, Smartphone, ShieldCheck } from "lucide-react";
 
 export default async function WhyUs() {
   const t = await getTranslations();
@@ -28,20 +23,20 @@ export default async function WhyUs() {
             </p>
           </div>
 
-          <div className="md:col-span-4 bg-sc-green/10 border border-sc-green/20 rounded-[2rem] p-12 flex flex-col items-center justify-center text-center">
+          <div className="md:col-span-4 bg-sc-green/10 border border-sc-green/20 rounded-[2rem] p-12 flex flex-col items-start justify-center text-left">
             <div className="w-20 h-20 rounded-full bg-sc-green/20 flex items-center justify-center mb-6">
               <Zap className="h-9 w-9 text-sc-green" />
             </div>
             <h3 className="font-headline text-2xl font-bold mb-2 text-sc-green">
               {t("WhyUs.speedTitle")}
             </h3>
-            <p className="text-sc-on-surface-variant">
-              {t("WhyUs.speedDesc")}
-            </p>
+            <p className="text-sc-on-surface-variant">{t("WhyUs.speedDesc")}</p>
           </div>
 
-          <div className="md:col-span-4 bg-sc-surface-high rounded-[2rem] p-12 flex flex-col justify-between">
-            <Smartphone className="h-9 w-9 text-sc-green mb-8 shrink-0" />
+          <div className="md:col-span-4 bg-sc-green/10 rounded-[2rem] p-10 flex flex-col justify-between">
+            <div className="w-20 h-20 rounded-full bg-sc-green/20 flex items-center justify-center mb-4 shrink-0">
+              <Smartphone className="h-9 w-9 text-sc-green" />
+            </div>
             <div>
               <h3 className="font-headline text-2xl font-bold mb-2">
                 {t("WhyUs.responsiveTitle")}

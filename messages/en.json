@@ -9,7 +9,7 @@
     "cta": "Request a quote"
   },
   "Hero": {
-    "badge": "Digital Development Studio",
+    "badge": "Digital Development",
     "title1": "We build websites that turn ",
     "titleAccent1": "ideas",
     "titleMid": " into ",
@@ -20,35 +20,35 @@
   },
   "Services": {
     "title": "Specialized Services",
-    "description": "We offer robust and aesthetically superior technical solutions for every stage of digital growth.",
-    "websitesTitle": "Corporate Websites",
-    "websitesDesc": "Solid, scalable structures that communicate your brand's authority with technological precision.",
+    "description": "We build solid, visually striking technical solutions to power every stage of your digital growth.",
+    "websitesTitle": "Websites",
+    "websitesDesc": "We build modern, robust, scalable websites designed to support your business growth.",
     "landingTitle": "Landing Pages",
-    "landingDesc": "Designed with neuromarketing principles to maximize conversion rates and return on investment.",
+    "landingDesc": "Built with a focus on SEO, performance, and clear structure to maximize conversions.",
     "ecommerceTitle": "Ecommerce",
-    "ecommerceDesc": "Online sales ecosystems optimized for a smooth and secure user experience."
+    "ecommerceDesc": "Online sales ecosystems optimized for a smooth, secure user experience."
   },
   "WhyUs": {
     "title": "Why choose us",
-    "designTitle": "Custom modern design",
-    "designDesc": "We don't use templates. Every pixel is designed from scratch to reflect your business's unique identity.",
+    "designTitle": "Modern, bespoke design",
+    "designDesc": "We don't use templates. Every site is designed from scratch to reflect your business's unique identity.",
     "speedTitle": "Fast websites",
-    "speedDesc": "Extreme speed optimization and technical SEO.",
+    "speedDesc": "Extreme speed optimization and SEO.",
     "responsiveTitle": "Responsive development",
-    "responsiveDesc": "Your site will look flawless on any device, from mobile phones to ultra-wide monitors.",
-    "conversionTitle": "Conversion-focused",
-    "conversionDesc": "We turn visitors into loyal customers through strategically planned user flows."
+    "responsiveDesc": "Your site adapts to any device, from phones to ultra-wide monitors.",
+    "securityTitle": "Secure infrastructure",
+    "securityDesc": "Built on solid foundations that protect your site and keep it running reliably."
   },
   "Process": {
     "title": "Our Process",
-    "step1Title": "Discovery",
-    "step1Desc": "We analyze your goals, competition, and audience to map out the project's success path.",
+    "step1Title": "Initial analysis",
+    "step1Desc": "We receive the project details and review the information provided.",
     "step2Title": "Design",
-    "step2Desc": "We create high-fidelity wireframes and visual prototypes focused on aesthetics and usability.",
-    "step3Title": "Development",
-    "step3Desc": "We code the solution with the most modern technologies, ensuring speed and security.",
+    "step2Desc": "We create a visual design based on wireframes, prototypes, and the project's structure.",
+    "step3Title": "Implementation",
+    "step3Desc": "We build the solution with the latest technologies, ensuring speed and security.",
     "step4Title": "Launch",
-    "step4Desc": "Final quality testing and project launch under expert supervision."
+    "step4Desc": "Final quality checks and go-live under supervision."
   },
   "Projects": {
     "title": "Selected Projects",
@@ -62,31 +62,26 @@
   },
   "FAQ": {
     "title": "Frequently Asked Questions",
-    "q1": "What type of websites do you develop?",
-    "a1": "We specialize in corporate websites, high-conversion landing pages, ecommerce, and custom web applications. All under an exclusive design approach and optimized performance.",
-    "q2": "Is the website mobile-friendly?",
-    "a2": "Absolutely. We apply a \"Mobile First\" approach ensuring the user experience is perfect on smartphones, tablets, and desktop computers.",
     "q3": "How long does a project take?",
-    "a3": "The timeline depends on complexity. A landing page can be ready in 2 weeks, while a robust corporate website usually takes 4 to 6 weeks.",
+    "a3": "Timing depends on complexity. A website can be ready in one week, while an ecommerce project usually takes 4 to 6 weeks.",
     "q4": "Do you offer post-launch maintenance?",
-    "a4": "Yes, we have monthly support plans to ensure your website is always updated, secure, and running at 100% capacity."
+    "a4": "Yes—we offer monthly support plans to keep your site updated, secure, and running at 100%."
   },
   "Contact": {
-    "title": "Ready to take your project to the next level?",
-    "description": "We're ready to transform your ideas into a dominant digital presence."
+    "title": "Ready to take your project to the next level?"
   },
   "Footer": {
-    "tagline": "Digital design and development studio focused on creating products that define the future of brands.",
+    "tagline": "Design and digital development studio focused on creating products that define the future of brands.",
     "navTitle": "Navigation",
     "legalTitle": "Legal",
     "socialTitle": "Social",
     "terms": "Terms",
     "privacy": "Privacy",
-    "copyright": "Digital Design & Development Studio."
+    "copyright": "Design & Digital Development."
   },
   "Form": {
     "title": "Your project",
-    "description": "We will review your idea and get in touch with you soon.",
+    "description": "We'll review your idea and get back to you soon.",
     "fullName": "Full name",
     "fullNamePlaceholder": "Full name",
     "email": "Email",
@@ -94,20 +89,20 @@
     "confirmEmail": "Confirm email",
     "confirmEmailPlaceholder": "Confirm email",
     "projectType": "Project type",
-    "projectTypePlaceholder": "Select project type",
-    "projectTypeEcommerce": "Online store (E-commerce)",
+    "projectTypePlaceholder": "Select a project type",
+    "projectTypeEcommerce": "Online store (e-commerce)",
     "projectTypeWebsite": "Website",
     "projectTypeLanding": "Landing page",
     "projectTypeWebApp": "Web application",
     "projectTypeOther": "Other",
     "projectDescription": "Project description",
     "projectDescriptionPlaceholder": "Tell us more about your project...",
-    "submit": "Send project",
+    "submit": "Submit project",
     "submitting": "Sending..."
   },
   "Toasts": {
     "emailAlreadyRegistered": "This email is already registered",
-    "success": "Thank you! Your project was sent successfully.",
+    "success": "Thank you! Your project was submitted successfully.",
     "error": "Something went wrong. Please try again."
   },
   "Validation": {
