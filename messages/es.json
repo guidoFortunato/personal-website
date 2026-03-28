@@ -9,7 +9,7 @@
     "cta": "Solicitar presupuesto"
   },
   "Hero": {
-    "badge": "Studio de Desarrollo Digital",
+    "badge": "Desarrollo Digital",
     "title1": "Desarrollamos sitios web que convierten ",
     "titleAccent1": "ideas",
     "titleMid": " en ",
@@ -20,35 +20,35 @@
   },
   "Services": {
     "title": "Servicios Especializados",
-    "description": "Ofrecemos soluciones técnicas robustas y estéticamente superiores para cada etapa del crecimiento digital.",
-    "websitesTitle": "Sitios Web Corporativos",
-    "websitesDesc": "Estructuras sólidas y escalables que comunican la autoridad de tu marca con precisión tecnológica.",
+    "description": "Creamos soluciones técnicas sólidas y visualmente destacadas para potenciar cada etapa de tu crecimiento digital",
+    "websitesTitle": "Sitios Web",
+    "websitesDesc": "Creamos sitios web modernos, sólidos y escalables, diseñados para acompañar el crecimiento de tu negocio.",
     "landingTitle": "Landing Pages",
-    "landingDesc": "Diseñadas bajo principios de neuromarketing para maximizar la tasa de conversión y el retorno de inversión.",
+    "landingDesc": "Desarrolladas con foco en SEO, rendimiento y estructura clara para maximizar conversiones.",
     "ecommerceTitle": "Ecommerce",
     "ecommerceDesc": "Ecosistemas de venta online optimizados para una experiencia de usuario fluida y segura."
   },
   "WhyUs": {
     "title": "Por qué elegirnos",
     "designTitle": "Diseño moderno y a medida",
-    "designDesc": "No usamos plantillas. Cada pixel se diseña desde cero para reflejar la identidad única de tu negocio.",
+    "designDesc": "No usamos plantillas. Cada sitio se diseña desde cero para reflejar la identidad única de tu negocio",
     "speedTitle": "Webs rápidas",
-    "speedDesc": "Optimización extrema de velocidad y SEO técnico.",
+    "speedDesc": "Optimización extrema de velocidad y SEO",
     "responsiveTitle": "Desarrollo responsive",
-    "responsiveDesc": "Tu sitio se verá impecable en cualquier dispositivo, desde móviles hasta ultra-wide monitors.",
-    "conversionTitle": "Enfoque en conversión",
-    "conversionDesc": "Convertimos las visitas en clientes leales mediante flujos de usuario estratégicamente planeados."
+    "responsiveDesc": "Tu sitio se adapta a cualquier dispositivo, desde móviles hasta monitores ultra-wide.",
+    "securityTitle": "Infraestructura segura",
+    "securityDesc": "Construido sobre bases sólidas que protegen tu sitio y aseguran su funcionamiento."
   },
   "Process": {
     "title": "Nuestro Proceso",
-    "step1Title": "Descubrimiento",
-    "step1Desc": "Analizamos tus objetivos, competencia y audiencia para trazar el mapa de éxito del proyecto.",
+    "step1Title": "Análisis inicial",
+    "step1Desc": "Recibimos los detalles del proyecto y analizamos la información proporcionada.",
     "step2Title": "Diseño",
-    "step2Desc": "Creamos wireframes y prototipos visuales de alta fidelidad centrados en la estética y usabilidad.",
-    "step3Title": "Desarrollo",
-    "step3Desc": "Codificamos la solución con las tecnologías más modernas, asegurando velocidad y seguridad.",
+    "step2Desc": "Creamos un diseño visual basado en wireframes, prototipos y la definición de la estructura del proyecto.",
+    "step3Title": "Implementación",
+    "step3Desc": "Desarrollamos la solución con las tecnologías más modernas, asegurando velocidad y seguridad.",
     "step4Title": "Lanzamiento",
-    "step4Desc": "Pruebas finales de calidad y puesta en marcha del proyecto bajo supervisión experta."
+    "step4Desc": "Pruebas finales de calidad y puesta en marcha del proyecto bajo supervisión."
   },
   "Projects": {
     "title": "Proyectos Seleccionados",
@@ -62,18 +62,13 @@
   },
   "FAQ": {
     "title": "Preguntas Frecuentes",
-    "q1": "¿Qué tipo de webs desarrollan?",
-    "a1": "Nos especializamos en sitios corporativos, landing pages de alta conversión, ecommerce y aplicaciones web a medida. Todo bajo un enfoque de diseño exclusivo y rendimiento optimizado.",
-    "q2": "¿La web se adapta a celulares?",
-    "a2": "Absolutamente. Aplicamos un enfoque \"Mobile First\" garantizando que la experiencia de usuario sea perfecta en smartphones, tablets y computadoras de escritorio.",
     "q3": "¿Cuánto tarda un proyecto?",
-    "a3": "El tiempo depende de la complejidad. Una landing page puede estar lista en 2 semanas, mientras que un sitio corporativo robusto suele tardar entre 4 a 6 semanas.",
+    "a3": "El tiempo depende de la complejidad. Un Sitio Web puede estar listo en una semana, mientras que un ecommerce suele tardar entre 4 a 6 semanas.",
     "q4": "¿Ofrecen mantenimiento post-lanzamiento?",
-    "a4": "Sí, contamos con planes de soporte mensual para asegurar que tu web esté siempre actualizada, segura y funcionando al 100% de su capacidad."
+    "a4": "Sí, contamos con planes de soporte mensual para asegurar que tu web esté siempre actualizada, segura y funcionando al 100%."
   },
   "Contact": {
-    "title": "¿Listo para llevar tu proyecto al siguiente nivel?",
-    "description": "Estamos listos para transformar tus ideas en una presencia digital dominante."
+    "title": "¿Listo para llevar tu proyecto al siguiente nivel?"
   },
   "Footer": {
     "tagline": "Studio de diseño y desarrollo digital enfocado en crear productos que definen el futuro de las marcas.",
@@ -82,7 +77,7 @@
     "socialTitle": "Social",
     "terms": "Términos",
     "privacy": "Privacidad",
-    "copyright": "Studio de Diseño y Desarrollo Digital."
+    "copyright": "Diseño y Desarrollo Digital."
   },
   "Form": {
     "title": "Tu proyecto",

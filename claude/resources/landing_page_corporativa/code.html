@@ -1,391 +1,475 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SteelClover | Diseño y Desarrollo Digital de Alto Impacto</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "secondary": "#c3c6cf",
-              "on-secondary": "#2d3137",
-              "on-primary": "#003822",
-              "tertiary-fixed": "#ffdcbf",
-              "secondary-fixed": "#dfe2eb",
-              "primary-container": "#3ddc97",
-              "outline-variant": "#3c4a41",
-              "surface-container-low": "#1a1c1f",
-              "inverse-surface": "#e2e2e6",
-              "tertiary-container": "#ffb368",
-              "surface": "#111317",
-              "on-tertiary-fixed-variant": "#6a3b00",
-              "background": "#111317",
-              "primary-fixed": "#65fdb5",
-              "surface-container-highest": "#333538",
-              "tertiary": "#ffd8b6",
-              "surface-container-lowest": "#0c0e11",
-              "error": "#ffb4ab",
-              "surface-bright": "#37393d",
-              "inverse-on-surface": "#2f3034",
-              "on-background": "#e2e2e6",
-              "on-primary-fixed-variant": "#005233",
-              "primary-fixed-dim": "#42e09a",
-              "on-secondary-container": "#b2b5bd",
-              "outline": "#859489",
-              "surface-container": "#1e2023",
-              "surface-variant": "#333538",
-              "inverse-primary": "#006c45",
-              "surface-tint": "#42e09a",
-              "secondary-fixed-dim": "#c3c6cf",
-              "on-secondary-fixed": "#181c22",
-              "on-tertiary": "#4a2800",
-              "on-tertiary-container": "#784300",
-              "on-secondary-fixed-variant": "#43474e",
-              "on-surface": "#e2e2e6",
-              "secondary-container": "#43474e",
-              "primary": "#61f9b1",
-              "error-container": "#93000a",
-              "on-error-container": "#ffdad6",
-              "on-tertiary-fixed": "#2d1600",
-              "tertiary-fixed-dim": "#ffb873",
-              "on-primary-fixed": "#002112",
-              "on-error": "#690005",
-              "on-primary-container": "#005c3a",
-              "surface-dim": "#111317",
-              "surface-container-high": "#282a2d",
-              "on-surface-variant": "#bbcabe"
-            },
-            fontFamily: {
-              "headline": ["Plus Jakarta Sans"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+<html class="dark" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>SteelClover | Diseño y Desarrollo Digital de Alto Impacto</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "secondary": "#c3c6cf",
+            "on-secondary": "#2d3137",
+            "on-primary": "#003822",
+            "tertiary-fixed": "#ffdcbf",
+            "secondary-fixed": "#dfe2eb",
+            "primary-container": "#3ddc97",
+            "outline-variant": "#3c4a41",
+            "surface-container-low": "#1a1c1f",
+            "inverse-surface": "#e2e2e6",
+            "tertiary-container": "#ffb368",
+            "surface": "#111317",
+            "on-tertiary-fixed-variant": "#6a3b00",
+            "background": "#111317",
+            "primary-fixed": "#65fdb5",
+            "surface-container-highest": "#333538",
+            "tertiary": "#ffd8b6",
+            "surface-container-lowest": "#0c0e11",
+            "error": "#ffb4ab",
+            "surface-bright": "#37393d",
+            "inverse-on-surface": "#2f3034",
+            "on-background": "#e2e2e6",
+            "on-primary-fixed-variant": "#005233",
+            "primary-fixed-dim": "#42e09a",
+            "on-secondary-container": "#b2b5bd",
+            "outline": "#859489",
+            "surface-container": "#1e2023",
+            "surface-variant": "#333538",
+            "inverse-primary": "#006c45",
+            "surface-tint": "#42e09a",
+            "secondary-fixed-dim": "#c3c6cf",
+            "on-secondary-fixed": "#181c22",
+            "on-tertiary": "#4a2800",
+            "on-tertiary-container": "#784300",
+            "on-secondary-fixed-variant": "#43474e",
+            "on-surface": "#e2e2e6",
+            "secondary-container": "#43474e",
+            "primary": "#61f9b1",
+            "error-container": "#93000a",
+            "on-error-container": "#ffdad6",
+            "on-tertiary-fixed": "#2d1600",
+            "tertiary-fixed-dim": "#ffb873",
+            "on-primary-fixed": "#002112",
+            "on-error": "#690005",
+            "on-primary-container": "#005c3a",
+            "surface-dim": "#111317",
+            "surface-container-high": "#282a2d",
+            "on-surface-variant": "#bbcabe"
           },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
         },
-      }
-    </script>
-<style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      .bg-grid-pattern {
-        background-image: radial-gradient(circle at 2px 2px, rgba(97, 249, 177, 0.05) 1px, transparent 0);
-        background-size: 40px 40px;
-      }
-      .ease-out-expo {
-        transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-      }
-    </style>
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .bg-grid-pattern {
+      background-image: radial-gradient(circle at 2px 2px, rgba(97, 249, 177, 0.05) 1px, transparent 0);
+      background-size: 40px 40px;
+    }
+
+    .ease-out-expo {
+      transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
 </head>
+
 <body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary overflow-x-hidden">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#111317]/80 backdrop-blur-xl border-b border-[#3DDC97]/10 shadow-2xl shadow-[#000000]/40">
-<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-<div class="text-xl font-bold tracking-tighter text-[#F5F7FA]">SteelClover</div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#3DDC97] font-semibold border-b-2 border-[#3DDC97] pb-1" href="#">Inicio</a>
-<a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#F5F7FA]/70 hover:text-[#3DDC97] transition-colors" href="#servicios">Servicios</a>
-<a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#F5F7FA]/70 hover:text-[#3DDC97] transition-colors" href="#proceso">Proceso</a>
-<a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#F5F7FA]/70 hover:text-[#3DDC97] transition-colors" href="#proyectos">Proyectos</a>
-<a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#F5F7FA]/70 hover:text-[#3DDC97] transition-colors" href="#faq">FAQ</a>
-<a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#F5F7FA]/70 hover:text-[#3DDC97] transition-colors" href="#contacto">Contacto</a>
-</div>
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-['Plus_Jakarta_Sans'] font-bold text-sm hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_0_20px_rgba(97,249,177,0.3)]">
-                Solicitar presupuesto
-            </button>
-</div>
-</nav>
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-<div class="absolute inset-0 bg-grid-pattern opacity-40"></div>
-<div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"></div>
-<div class="absolute bottom-1/4 -left-20 w-96 h-96 bg-primary-container/10 blur-[120px] rounded-full"></div>
-<div class="max-w-7xl mx-auto px-8 w-full relative z-10">
-<div class="max-w-4xl">
-<span class="inline-block px-4 py-1.5 rounded-full bg-surface-container-high border border-outline-variant/30 text-primary text-xs font-bold tracking-[0.1em] uppercase mb-8">
-                    Studio de Desarrollo Digital
-                </span>
-<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] tracking-tight mb-8">
-                    Desarrollamos sitios web que convierten <span class="text-primary italic">ideas</span> en <span class="text-primary">resultados</span>
-</h1>
-<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mb-12 leading-relaxed">
-                    Creamos experiencias digitales de alto rendimiento fusionando un diseño minimalista con tecnología de vanguardia para escalar tu negocio al siguiente nivel.
-                </p>
-<div class="flex flex-col sm:flex-row gap-6">
-<button class="bg-primary text-on-primary px-10 py-5 rounded-xl font-bold text-lg hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_10px_30px_rgba(97,249,177,0.2)]">
-                        Solicitar presupuesto
-                    </button>
-<button class="bg-surface-container-high text-primary px-10 py-5 rounded-xl font-bold text-lg hover:bg-surface-container-highest transition-all duration-300">
-                        Ver proyectos
-                    </button>
-</div>
-</div>
-</div>
-</section>
-<!-- Services Section -->
-<section class="py-32 bg-surface-container-low" id="servicios">
-<div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-<div class="max-w-2xl">
-<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-6">Servicios Especializados</h2>
-<p class="text-on-surface-variant text-lg leading-relaxed">Ofrecemos soluciones técnicas robustas y estéticamente superiores para cada etapa del crecimiento digital.</p>
-</div>
-<div class="hidden md:block h-[2px] w-24 bg-primary mb-4"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Card 1 -->
-<div class="group p-10 bg-surface-container rounded-3xl hover:bg-surface-container-high transition-all duration-500 ease-out-expo hover:scale-[1.02] border border-outline-variant/10">
-<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-500">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-3xl">language</span>
-</div>
-<h3 class="font-headline text-2xl font-bold mb-4">Sitios Web Corporativos</h3>
-<p class="text-on-surface-variant leading-relaxed">Estructuras sólidas y escalables que comunican la autoridad de tu marca con precisión tecnológica.</p>
-</div>
-<!-- Card 2 -->
-<div class="group p-10 bg-surface-container rounded-3xl hover:bg-surface-container-high transition-all duration-500 ease-out-expo hover:scale-[1.02] border border-outline-variant/10">
-<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-500">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-3xl">ads_click</span>
-</div>
-<h3 class="font-headline text-2xl font-bold mb-4">Landing Pages</h3>
-<p class="text-on-surface-variant leading-relaxed">Diseñadas bajo principios de neuromarketing para maximizar la tasa de conversión y el retorno de inversión.</p>
-</div>
-<!-- Card 3 -->
-<div class="group p-10 bg-surface-container rounded-3xl hover:bg-surface-container-high transition-all duration-500 ease-out-expo hover:scale-[1.02] border border-outline-variant/10">
-<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-500">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-3xl">shopping_bag</span>
-</div>
-<h3 class="font-headline text-2xl font-bold mb-4">Ecommerce</h3>
-<p class="text-on-surface-variant leading-relaxed">Ecosistemas de venta online optimizados para una experiencia de usuario fluida y segura.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Why Us Section (Asymmetric Bento) -->
-<section class="py-32 bg-surface">
-<div class="max-w-7xl mx-auto px-8">
-<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-20 text-center">Por qué elegirnos</h2>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
-<div class="md:col-span-8 bg-surface-container-low rounded-[2rem] p-12 flex flex-col justify-end relative overflow-hidden group">
-<div class="absolute top-12 right-12 opacity-10 group-hover:opacity-20 transition-opacity">
-<span class="material-symbols-outlined text-[120px]">architecture</span>
-</div>
-<h3 class="font-headline text-3xl font-bold mb-4 relative z-10">Diseño moderno y a medida</h3>
-<p class="text-on-surface-variant text-lg max-w-md relative z-10">No usamos plantillas. Cada pixel se diseña desde cero para reflejar la identidad única de tu negocio.</p>
-</div>
-<div class="md:col-span-4 bg-primary/10 border border-primary/20 rounded-[2rem] p-12 flex flex-col items-center justify-center text-center group">
-<div class="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">bolt</span>
-</div>
-<h3 class="font-headline text-2xl font-bold mb-2 text-primary">Webs rápidas</h3>
-<p class="text-on-surface-variant">Optimización extrema de velocidad y SEO técnico.</p>
-</div>
-<div class="md:col-span-4 bg-surface-container-high rounded-[2rem] p-12 flex flex-col justify-between group">
-<span class="material-symbols-outlined text-primary text-4xl mb-8">devices</span>
-<div>
-<h3 class="font-headline text-2xl font-bold mb-2">Desarrollo responsive</h3>
-<p class="text-on-surface-variant">Tu sitio se verá impecable en cualquier dispositivo, desde móviles hasta ultra-wide monitors.</p>
-</div>
-</div>
-<div class="md:col-span-8 bg-surface-container rounded-[2rem] p-12 flex items-center justify-between group overflow-hidden">
-<div class="max-w-sm">
-<h3 class="font-headline text-3xl font-bold mb-4">Enfoque en conversión</h3>
-<p class="text-on-surface-variant text-lg">Convertimos las visitas en clientes leales mediante flujos de usuario estratégicamente planeados.</p>
-</div>
-<div class="hidden lg:block transform translate-x-10">
-<span class="material-symbols-outlined text-[180px] text-surface-container-highest">trending_up</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Our Process Section -->
-<section class="py-32 bg-surface-container-low relative overflow-hidden" id="proceso">
-<div class="max-w-7xl mx-auto px-8 relative z-10">
-<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-20">Nuestro Proceso</h2>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
-<!-- Line background for desktop -->
-<div class="hidden md:block absolute top-[44px] left-0 w-full h-[2px] bg-outline-variant/30"></div>
-<!-- Step 1 -->
-<div class="relative">
-<div class="w-12 h-12 rounded-full bg-surface-container-highest border-4 border-primary flex items-center justify-center mb-8 relative z-10">
-<span class="font-bold text-primary">01</span>
-</div>
-<h4 class="font-headline text-xl font-bold mb-4">Descubrimiento</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">Analizamos tus objetivos, competencia y audiencia para trazar el mapa de éxito del proyecto.</p>
-</div>
-<!-- Step 2 -->
-<div class="relative">
-<div class="w-12 h-12 rounded-full bg-surface-container-highest border-4 border-outline-variant/30 flex items-center justify-center mb-8 relative z-10">
-<span class="font-bold text-on-surface-variant">02</span>
-</div>
-<h4 class="font-headline text-xl font-bold mb-4">Diseño</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">Creamos wireframes y prototipos visuales de alta fidelidad centrados en la estética y usabilidad.</p>
-</div>
-<!-- Step 3 -->
-<div class="relative">
-<div class="w-12 h-12 rounded-full bg-surface-container-highest border-4 border-outline-variant/30 flex items-center justify-center mb-8 relative z-10">
-<span class="font-bold text-on-surface-variant">03</span>
-</div>
-<h4 class="font-headline text-xl font-bold mb-4">Desarrollo</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">Codificamos la solución con las tecnologías más modernas, asegurando velocidad y seguridad.</p>
-</div>
-<!-- Step 4 -->
-<div class="relative">
-<div class="w-12 h-12 rounded-full bg-surface-container-highest border-4 border-outline-variant/30 flex items-center justify-center mb-8 relative z-10">
-<span class="font-bold text-on-surface-variant">04</span>
-</div>
-<h4 class="font-headline text-xl font-bold mb-4">Lanzamiento</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">Pruebas finales de calidad y puesta en marcha del proyecto bajo supervisión experta.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Projects Section -->
-<section class="py-32 bg-surface" id="proyectos">
-<div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-4">
-<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface">Proyectos Seleccionados</h2>
-<a class="text-primary font-bold flex items-center gap-2 group" href="#">
-                    Ver todo el portafolio <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-<!-- Project 1 -->
-<div class="group cursor-pointer">
-<div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 relative bg-surface-container">
-<img alt="Nova Studio Case Study" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out-expo" data-alt="clean minimalist web design interface for a creative studio with deep shadows and soft green typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5hkjn3gPgJPRs7o7VcAr9nF5s0oqiaO8N2tHX903MFraKU-aHh5d8E5YpCf7LtJpN2hfgf2O1vyhTl4j2eMecKVB6h2kQoMTyYpA3AZeo2q1YxvWABkbx8yPsdLqWvl72MqsVz8ZZ7zZNk3ECTybS9NsVqS1rU4T40JFUaDCp5KPwglHYwcujNz4YXmFla8zbyyIhhztGNSObwkD4qCWEMEJciA7DrxPP3C1thmMYy_AuzwSthWfja-OyTvgFEpC9UkqIZppB-M03"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
-</div>
-<h3 class="font-headline text-2xl font-bold mb-2">Nova Studio</h3>
-<p class="text-on-surface-variant font-medium">Arquitectura de Marca &amp; Web</p>
-</div>
-<!-- Project 2 -->
-<div class="group cursor-pointer translate-y-0 md:translate-y-12">
-<div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 relative bg-surface-container">
-<img alt="Pulse Launch Case Study" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out-expo" data-alt="futuristic dashboard data visualization with neon emerald highlights on a dark obsidian glass texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3-HqCUksC7wWeKAeplClR06VZTKx93suWU9TRT0lEnjcQoCldn_a7SDmDqqjHKa_7bb-_PRIA42eHQnT4Cak1ktwE8Ko5Zy8PdzgNKTMIOP4hQiiBrhrhA3nNxmXL5qa1U38LGVVwiGrE_kBx2ONS2N9vSQqJ4_IUUI6JwkoqoMI3zfhFfkDuMrvMjzFrdITOyUHZpuPcPI-l5_AocW9dbRd3IKlk1Eon73ibr7_ttwJ_kkmmjyA7lrESVwycwZZDoErxTNyOI4TO"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
-</div>
-<h3 class="font-headline text-2xl font-bold mb-2">Pulse Launch</h3>
-<p class="text-on-surface-variant font-medium">SaaS Dashboard &amp; UI Design</p>
-</div>
-<!-- Project 3 -->
-<div class="group cursor-pointer">
-<div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 relative bg-surface-container">
-<img alt="Urban Cart Case Study" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out-expo" data-alt="sophisticated ecommerce interface showing high-end streetwear with smooth layout transitions and elegant typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH1M6NYoOaebEXbSEL9POoVLaQWFqAGko3MQdSndCxTEIKzTkQnVFmAVm-6t21cPbA_9X5Zu7t2ooWq3IvQQybCe6thIc5kKPdL-g8rej51Yss0fyoyRk-4jHWdrwGNnPeH4aygmv4As4OvbOq3Tx-RXV18Wy5LSkikaq2jcgI5sR4ITsKBm6jXLSWayYeQUJQAjsEgWHptKwbekypxS0fJqBAbHCNt2uCanjLaanAEEfEB95IUN0z3Kf_jbtfltW3XZI3ETawc5jy"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
-</div>
-<h3 class="font-headline text-2xl font-bold mb-2">Urban Cart</h3>
-<p class="text-on-surface-variant font-medium">Ecommerce High-End</p>
-</div>
-</div>
-</div>
-</section>
-<!-- FAQ Section -->
-<section class="py-32 bg-surface-container-low" id="faq">
-<div class="max-w-4xl mx-auto px-8">
-<h2 class="font-headline text-4xl font-bold text-on-surface mb-16 text-center">Preguntas Frecuentes</h2>
-<div class="space-y-4">
-<div class="bg-surface-container rounded-2xl p-6 border border-outline-variant/5">
-<details class="group">
-<summary class="flex justify-between items-center cursor-pointer list-none">
-<span class="font-headline text-lg font-bold">¿Qué tipo de webs desarrollan?</span>
-<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<p class="mt-4 text-on-surface-variant leading-relaxed">Nos especializamos en sitios corporativos, landing pages de alta conversión, ecommerce y aplicaciones web a medida. Todo bajo un enfoque de diseño exclusivo y rendimiento optimizado.</p>
-</details>
-</div>
-<div class="bg-surface-container rounded-2xl p-6 border border-outline-variant/5">
-<details class="group">
-<summary class="flex justify-between items-center cursor-pointer list-none">
-<span class="font-headline text-lg font-bold">¿La web se adapta a celulares?</span>
-<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<p class="mt-4 text-on-surface-variant leading-relaxed">Absolutamente. Aplicamos un enfoque "Mobile First" garantizando que la experiencia de usuario sea perfecta en smartphones, tablets y computadoras de escritorio.</p>
-</details>
-</div>
-<div class="bg-surface-container rounded-2xl p-6 border border-outline-variant/5">
-<details class="group">
-<summary class="flex justify-between items-center cursor-pointer list-none">
-<span class="font-headline text-lg font-bold">¿Cuánto tarda un proyecto?</span>
-<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<p class="mt-4 text-on-surface-variant leading-relaxed">El tiempo depende de la complejidad. Una landing page puede estar lista en 2 semanas, mientras que un sitio corporativo robusto suele tardar entre 4 a 6 semanas.</p>
-</details>
-</div>
-<div class="bg-surface-container rounded-2xl p-6 border border-outline-variant/5">
-<details class="group">
-<summary class="flex justify-between items-center cursor-pointer list-none">
-<span class="font-headline text-lg font-bold">¿Ofrecen mantenimiento post-lanzamiento?</span>
-<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<p class="mt-4 text-on-surface-variant leading-relaxed">Sí, contamos con planes de soporte mensual para asegurar que tu web esté siempre actualizada, segura y funcionando al 100% de su capacidad.</p>
-</details>
-</div>
-</div>
-</div>
-</section>
-<!-- Final CTA Section -->
-<section class="py-32 relative overflow-hidden" id="contacto">
-<div class="absolute inset-0 bg-primary/5"></div>
-<div class="max-w-7xl mx-auto px-8 relative z-10 text-center">
-<div class="max-w-3xl mx-auto">
-<h2 class="font-headline text-4xl md:text-6xl font-extrabold text-on-surface mb-8">¿Listo para llevar tu proyecto al siguiente nivel?</h2>
-<p class="text-on-surface-variant text-xl mb-12">Estamos listos para transformar tus ideas en una presencia digital dominante.</p>
-<button class="bg-primary text-on-primary px-12 py-6 rounded-full font-bold text-xl hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_20px_40px_rgba(97,249,177,0.3)]">
-                    Hablemos sobre tu proyecto
-                </button>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-[#111317] w-full py-16 px-8 border-t border-[#1a1c1f]">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
-<div class="col-span-1 md:col-span-1">
-<span class="text-2xl font-black text-[#F5F7FA] mb-4 block">SteelClover</span>
-<p class="text-[#F5F7FA]/50 font-['Plus_Jakarta_Sans'] text-sm leading-relaxed">Studio de diseño y desarrollo digital enfocado en crear productos que definen el futuro de las marcas.</p>
-</div>
-<div class="col-span-1">
-<h4 class="text-[#F5F7FA] font-bold mb-6 text-sm uppercase tracking-widest">Navegación</h4>
-<ul class="space-y-4">
-<li><a class="text-[#F5F7FA]/50 hover:text-[#3DDC97] transition-colors duration-200 text-sm" href="#">Inicio</a></li>
-<li><a class="text-[#F5F7FA]/50 hover:text-[#3DDC97] transition-colors duration-200 text-sm" href="#servicios">Servicios</a></li>
-<li><a class="text-[#F5F7FA]/50 hover:text-[#3DDC97] transition-colors duration-200 text-sm" href="#proceso">Proceso</a></li>
-<li><a class="text-[#F5F7FA]/50 hover:text-[#3DDC97] transition-colors duration-200 text-sm" href="#proyectos">Proyectos</a></li>
-</ul>
-</div>
-<div class="col-span-1">
-<h4 class="text-[#F5F7FA] font-bold mb-6 text-sm uppercase tracking-widest">Legal</h4>
-<ul class="space-y-4">
-<li><a class="text-[#F5F7FA]/50 hover:text-[#3DDC97] transition-colors duration-200 text-sm" href="#">FAQ</a></li>
-<li><a class="text-[#F5F7FA]/50 hover:text-[#3DDC97] transition-colors duration-200 text-sm" href="#">Términos</a></li>
-<li><a class="text-[#F5F7FA]/50 hover:text-[#3DDC97] transition-colors duration-200 text-sm" href="#">Privacidad</a></li>
-</ul>
-</div>
-<div class="col-span-1">
-<h4 class="text-[#F5F7FA] font-bold mb-6 text-sm uppercase tracking-widest">Social</h4>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-[#F5F7FA]/50 hover:text-[#3DDC97] hover:bg-surface-container-high transition-all" href="#">
-<span class="material-symbols-outlined text-xl">share</span>
-</a>
-<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-[#F5F7FA]/50 hover:text-[#3DDC97] hover:bg-surface-container-high transition-all" href="#">
-<span class="material-symbols-outlined text-xl">public</span>
-</a>
-<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-[#F5F7FA]/50 hover:text-[#3DDC97] hover:bg-surface-container-high transition-all" href="#">
-<span class="material-symbols-outlined text-xl">alternate_email</span>
-</a>
-</div>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-outline-variant/10 text-center">
-<p class="text-[#F5F7FA]/50 font-['Plus_Jakarta_Sans'] text-sm leading-relaxed">© 2024 SteelClover. Studio de Diseño y Desarrollo Digital.</p>
-</div>
-</footer>
-</body></html>
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 w-full z-50 bg-[#111317]/80 backdrop-blur-xl border-b border-[#3DDC97]/10 shadow-2xl shadow-[#000000]/40">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+      <div class="text-xl font-bold tracking-tighter text-[#F5F7FA]">SteelClover</div>
+      <div class="hidden md:flex gap-8 items-center">
+        <a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#3DDC97] font-semibold border-b-2 border-[#3DDC97] pb-1"
+          href="#">Inicio</a>
+        <a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#F5F7FA]/70 hover:text-[#3DDC97] transition-colors"
+          href="#servicios">Servicios</a>
+        <a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#F5F7FA]/70 hover:text-[#3DDC97] transition-colors"
+          href="#proceso">Proceso</a>
+        <a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#F5F7FA]/70 hover:text-[#3DDC97] transition-colors"
+          href="#proyectos">Proyectos</a>
+        <a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#F5F7FA]/70 hover:text-[#3DDC97] transition-colors"
+          href="#faq">FAQ</a>
+        <a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-[#F5F7FA]/70 hover:text-[#3DDC97] transition-colors"
+          href="#contacto">Contacto</a>
+      </div>
+      <button
+        class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-['Plus_Jakarta_Sans'] font-bold text-sm hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_0_20px_rgba(97,249,177,0.3)]">
+        Solicitar presupuesto
+      </button>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <div class="absolute inset-0 bg-grid-pattern opacity-40"></div>
+    <div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-1/4 -left-20 w-96 h-96 bg-primary-container/10 blur-[120px] rounded-full"></div>
+    <div class="max-w-7xl mx-auto px-8 w-full relative z-10">
+      <div class="max-w-4xl">
+        <span
+          class="inline-block px-4 py-1.5 rounded-full bg-surface-container-high border border-outline-variant/30 text-primary text-xs font-bold tracking-[0.1em] uppercase mb-8">
+          Studio de Desarrollo Digital
+        </span>
+        <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] tracking-tight mb-8">
+          Desarrollamos sitios web que convierten <span class="text-primary italic">ideas</span> en <span
+            class="text-primary">resultados</span>
+        </h1>
+        <p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mb-12 leading-relaxed">
+          Creamos experiencias digitales de alto rendimiento fusionando un diseño minimalista con tecnología de
+          vanguardia para escalar tu negocio al siguiente nivel.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6">
+          <button
+            class="bg-primary text-on-primary px-10 py-5 rounded-xl font-bold text-lg hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_10px_30px_rgba(97,249,177,0.2)]">
+            Solicitar presupuesto
+          </button>
+          <button
+            class="bg-surface-container-high text-primary px-10 py-5 rounded-xl font-bold text-lg hover:bg-surface-container-highest transition-all duration-300">
+            Ver proyectos
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services Section -->
+  <section class="py-32 bg-surface-container-low" id="servicios">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div class="max-w-2xl">
+          <h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-6">Servicios Especializados</h2>
+          <p class="text-on-surface-variant text-lg leading-relaxed">Creamos soluciones técnicas sólidas y visualmente
+            destacadas para potenciar cada etapa de tu crecimiento digital</p>
+        </div>
+        <div class="hidden md:block h-[2px] w-24 bg-primary mb-4"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div
+          class="group p-10 bg-surface-container rounded-3xl hover:bg-surface-container-high transition-all duration-500 ease-out-expo hover:scale-[1.02] border border-outline-variant/10">
+          <div
+            class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-500">
+            <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-3xl">language</span>
+          </div>
+          <h3 class="font-headline text-2xl font-bold mb-4">Sitios Web</h3>
+          <p class="text-on-surface-variant leading-relaxed">Estructuras sólidas y escalables que comunican la autoridad
+            de tu marca con precisión tecnológica.</p>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="group p-10 bg-surface-container rounded-3xl hover:bg-surface-container-high transition-all duration-500 ease-out-expo hover:scale-[1.02] border border-outline-variant/10">
+          <div
+            class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-500">
+            <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-3xl">ads_click</span>
+          </div>
+          <h3 class="font-headline text-2xl font-bold mb-4">Landing Pages</h3>
+          <p class="text-on-surface-variant leading-relaxed">Diseñadas bajo principios de neuromarketing para maximizar
+            la tasa de conversión y el retorno de inversión.</p>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="group p-10 bg-surface-container rounded-3xl hover:bg-surface-container-high transition-all duration-500 ease-out-expo hover:scale-[1.02] border border-outline-variant/10">
+          <div
+            class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-500">
+            <span
+              class="material-symbols-outlined text-primary group-hover:text-on-primary text-3xl">shopping_bag</span>
+          </div>
+          <h3 class="font-headline text-2xl font-bold mb-4">Ecommerce</h3>
+          <p class="text-on-surface-variant leading-relaxed">Ecosistemas de venta online optimizados para una
+            experiencia de usuario fluida y segura.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Why Us Section (Asymmetric Bento) -->
+  <section class="py-32 bg-surface">
+    <div class="max-w-7xl mx-auto px-8">
+      <h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-20 text-center">Por qué elegirnos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+        <div
+          class="md:col-span-8 bg-surface-container-low rounded-[2rem] p-12 flex flex-col justify-end relative overflow-hidden group">
+          <div class="absolute top-12 right-12 opacity-10 group-hover:opacity-20 transition-opacity">
+            <span class="material-symbols-outlined text-[120px]">architecture</span>
+          </div>
+          <h3 class="font-headline text-3xl font-bold mb-4 relative z-10">Diseño moderno y a medida</h3>
+          <p class="text-on-surface-variant text-lg max-w-md relative z-10">No usamos plantillas. Cada pixel se diseña
+            desde cero para reflejar la identidad única de tu negocio.</p>
+        </div>
+        <div
+          class="md:col-span-4 bg-primary/10 border border-primary/20 rounded-[2rem] p-12 flex flex-col items-center justify-center text-center group">
+          <div
+            class="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">bolt</span>
+          </div>
+          <h3 class="font-headline text-2xl font-bold mb-2 text-primary">Webs rápidas</h3>
+          <p class="text-on-surface-variant">Optimización extrema de velocidad y SEO</p>
+        </div>
+        <div class="md:col-span-4 bg-surface-container-high rounded-[2rem] p-12 flex flex-col justify-between group">
+          <span class="material-symbols-outlined text-primary text-4xl mb-8">devices</span>
+          <div>
+            <h3 class="font-headline text-2xl font-bold mb-2">Desarrollo responsive</h3>
+            <p class="text-on-surface-variant">Tu sitio se verá impecable en cualquier dispositivo, desde móviles hasta
+              ultra-wide monitors.</p>
+          </div>
+        </div>
+        <div
+          class="md:col-span-8 bg-surface-container rounded-[2rem] p-12 flex items-center justify-between group overflow-hidden">
+          <div class="max-w-sm">
+            <h3 class="font-headline text-3xl font-bold mb-4">Infraestructura segura</h3>
+            <p class="text-on-surface-variant text-lg">Convertimos las visitas en clientes leales mediante flujos de
+              usuario estratégicamente planeados.</p>
+          </div>
+          <div class="hidden lg:block transform translate-x-10">
+            <span class="material-symbols-outlined text-[180px] text-surface-container-highest">trending_up</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Our Process Section -->
+  <section class="py-32 bg-surface-container-low relative overflow-hidden" id="proceso">
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+      <h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-20">Nuestro Proceso</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+        <!-- Line background for desktop -->
+        <div class="hidden md:block absolute top-[44px] left-0 w-full h-[2px] bg-outline-variant/30"></div>
+        <!-- Step 1 -->
+        <div class="relative">
+          <div
+            class="w-12 h-12 rounded-full bg-surface-container-highest border-4 border-primary flex items-center justify-center mb-8 relative z-10">
+            <span class="font-bold text-primary">01</span>
+          </div>
+          <h4 class="font-headline text-xl font-bold mb-4">Descubrimiento</h4>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Analizamos tus objetivos, competencia y audiencia
+            para trazar el mapa de éxito del proyecto.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="relative">
+          <div
+            class="w-12 h-12 rounded-full bg-surface-container-highest border-4 border-outline-variant/30 flex items-center justify-center mb-8 relative z-10">
+            <span class="font-bold text-on-surface-variant">02</span>
+          </div>
+          <h4 class="font-headline text-xl font-bold mb-4">Diseño</h4>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Creamos wireframes y prototipos visuales de alta
+            fidelidad centrados en la estética y usabilidad.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="relative">
+          <div
+            class="w-12 h-12 rounded-full bg-surface-container-highest border-4 border-outline-variant/30 flex items-center justify-center mb-8 relative z-10">
+            <span class="font-bold text-on-surface-variant">03</span>
+          </div>
+          <h4 class="font-headline text-xl font-bold mb-4">Desarrollo</h4>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Codificamos la solución con las tecnologías más
+            modernas, asegurando velocidad y seguridad.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="relative">
+          <div
+            class="w-12 h-12 rounded-full bg-surface-container-highest border-4 border-outline-variant/30 flex items-center justify-center mb-8 relative z-10">
+            <span class="font-bold text-on-surface-variant">04</span>
+          </div>
+          <h4 class="font-headline text-xl font-bold mb-4">Lanzamiento</h4>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Pruebas finales de calidad y puesta en marcha del
+            proyecto bajo supervisión experta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Projects Section -->
+  <section class="py-32 bg-surface" id="proyectos">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-4">
+        <h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface">Proyectos Seleccionados</h2>
+        <a class="text-primary font-bold flex items-center gap-2 group" href="#">
+          Ver todo el portafolio <span
+            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Project 1 -->
+        <div class="group cursor-pointer">
+          <div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 relative bg-surface-container">
+            <img alt="Nova Studio Case Study"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out-expo"
+              data-alt="clean minimalist web design interface for a creative studio with deep shadows and soft green typography"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5hkjn3gPgJPRs7o7VcAr9nF5s0oqiaO8N2tHX903MFraKU-aHh5d8E5YpCf7LtJpN2hfgf2O1vyhTl4j2eMecKVB6h2kQoMTyYpA3AZeo2q1YxvWABkbx8yPsdLqWvl72MqsVz8ZZ7zZNk3ECTybS9NsVqS1rU4T40JFUaDCp5KPwglHYwcujNz4YXmFla8zbyyIhhztGNSObwkD4qCWEMEJciA7DrxPP3C1thmMYy_AuzwSthWfja-OyTvgFEpC9UkqIZppB-M03" />
+            <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+          </div>
+          <h3 class="font-headline text-2xl font-bold mb-2">Nova Studio</h3>
+          <p class="text-on-surface-variant font-medium">Arquitectura de Marca &amp; Web</p>
+        </div>
+        <!-- Project 2 -->
+        <div class="group cursor-pointer translate-y-0 md:translate-y-12">
+          <div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 relative bg-surface-container">
+            <img alt="Pulse Launch Case Study"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out-expo"
+              data-alt="futuristic dashboard data visualization with neon emerald highlights on a dark obsidian glass texture"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3-HqCUksC7wWeKAeplClR06VZTKx93suWU9TRT0lEnjcQoCldn_a7SDmDqqjHKa_7bb-_PRIA42eHQnT4Cak1ktwE8Ko5Zy8PdzgNKTMIOP4hQiiBrhrhA3nNxmXL5qa1U38LGVVwiGrE_kBx2ONS2N9vSQqJ4_IUUI6JwkoqoMI3zfhFfkDuMrvMjzFrdITOyUHZpuPcPI-l5_AocW9dbRd3IKlk1Eon73ibr7_ttwJ_kkmmjyA7lrESVwycwZZDoErxTNyOI4TO" />
+            <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+          </div>
+          <h3 class="font-headline text-2xl font-bold mb-2">Pulse Launch</h3>
+          <p class="text-on-surface-variant font-medium">SaaS Dashboard &amp; UI Design</p>
+        </div>
+        <!-- Project 3 -->
+        <div class="group cursor-pointer">
+          <div class="aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 relative bg-surface-container">
+            <img alt="Urban Cart Case Study"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out-expo"
+              data-alt="sophisticated ecommerce interface showing high-end streetwear with smooth layout transitions and elegant typography"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH1M6NYoOaebEXbSEL9POoVLaQWFqAGko3MQdSndCxTEIKzTkQnVFmAVm-6t21cPbA_9X5Zu7t2ooWq3IvQQybCe6thIc5kKPdL-g8rej51Yss0fyoyRk-4jHWdrwGNnPeH4aygmv4As4OvbOq3Tx-RXV18Wy5LSkikaq2jcgI5sR4ITsKBm6jXLSWayYeQUJQAjsEgWHptKwbekypxS0fJqBAbHCNt2uCanjLaanAEEfEB95IUN0z3Kf_jbtfltW3XZI3ETawc5jy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+          </div>
+          <h3 class="font-headline text-2xl font-bold mb-2">Urban Cart</h3>
+          <p class="text-on-surface-variant font-medium">Ecommerce High-End</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQ Section -->
+  <section class="py-32 bg-surface-container-low" id="faq">
+    <div class="max-w-4xl mx-auto px-8">
+      <h2 class="font-headline text-4xl font-bold text-on-surface mb-16 text-center">Preguntas Frecuentes</h2>
+      <div class="space-y-4">
+        <div class="bg-surface-container rounded-2xl p-6 border border-outline-variant/5">
+          <details class="group">
+            <summary class="flex justify-between items-center cursor-pointer list-none">
+              <span class="font-headline text-lg font-bold">¿Qué tipo de webs desarrollan?</span>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <p class="mt-4 text-on-surface-variant leading-relaxed">Nos especializamos en sitios corporativos, landing
+              pages de alta conversión, ecommerce y aplicaciones web a medida. Todo bajo un enfoque de diseño exclusivo
+              y rendimiento optimizado.</p>
+          </details>
+        </div>
+        <div class="bg-surface-container rounded-2xl p-6 border border-outline-variant/5">
+          <details class="group">
+            <summary class="flex justify-between items-center cursor-pointer list-none">
+              <span class="font-headline text-lg font-bold">¿La web se adapta a celulares?</span>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <p class="mt-4 text-on-surface-variant leading-relaxed">Absolutamente. Aplicamos un enfoque "Mobile First"
+              garantizando que la experiencia de usuario sea perfecta en smartphones, tablets y computadoras de
+              escritorio.</p>
+          </details>
+        </div>
+        <div class="bg-surface-container rounded-2xl p-6 border border-outline-variant/5">
+          <details class="group">
+            <summary class="flex justify-between items-center cursor-pointer list-none">
+              <span class="font-headline text-lg font-bold">¿Cuánto tarda un proyecto?</span>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <p class="mt-4 text-on-surface-variant leading-relaxed">El tiempo depende de la complejidad. Una landing
+              page puede estar lista en 2 semanas, mientras que un sitio corporativo robusto suele tardar entre 4 a 6
+              semanas.</p>
+          </details>
+        </div>
+        <div class="bg-surface-container rounded-2xl p-6 border border-outline-variant/5">
+          <details class="group">
+            <summary class="flex justify-between items-center cursor-pointer list-none">
+              <span class="font-headline text-lg font-bold">¿Ofrecen mantenimiento post-lanzamiento?</span>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <p class="mt-4 text-on-surface-variant leading-relaxed">Sí, contamos con planes de soporte mensual para
+              asegurar que tu web esté siempre actualizada, segura y funcionando al 100% de su capacidad.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Final CTA Section -->
+  <section class="py-32 relative overflow-hidden" id="contacto">
+    <div class="absolute inset-0 bg-primary/5"></div>
+    <div class="max-w-7xl mx-auto px-8 relative z-10 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-headline text-4xl md:text-6xl font-extrabold text-on-surface mb-8">¿Listo para llevar tu
+          proyecto al siguiente nivel?</h2>
+        <p class="text-on-surface-variant text-xl mb-12">Estamos listos para transformar tus ideas en una presencia
+          digital dominante.</p>
+        <button
+          class="bg-primary text-on-primary px-12 py-6 rounded-full font-bold text-xl hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_20px_40px_rgba(97,249,177,0.3)]">
+          Hablemos sobre tu proyecto
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-[#111317] w-full py-16 px-8 border-t border-[#1a1c1f]">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+      <div class="col-span-1 md:col-span-1">
+        <span class="text-2xl font-black text-[#F5F7FA] mb-4 block">SteelClover</span>
+        <p class="text-[#F5F7FA]/50 font-['Plus_Jakarta_Sans'] text-sm leading-relaxed">Studio de diseño y desarrollo
+          digital enfocado en crear productos que definen el futuro de las marcas.</p>
+      </div>
+      <div class="col-span-1">
+        <h4 class="text-[#F5F7FA] font-bold mb-6 text-sm uppercase tracking-widest">Navegación</h4>
+        <ul class="space-y-4">
+          <li><a class="text-[#F5F7FA]/50 hover:text-[#3DDC97] transition-colors duration-200 text-sm"
+              href="#">Inicio</a></li>
+          <li><a class="text-[#F5F7FA]/50 hover:text-[#3DDC97] transition-colors duration-200 text-sm"
+              href="#servicios">Servicios</a></li>
+          <li><a class="text-[#F5F7FA]/50 hover:text-[#3DDC97] transition-colors duration-200 text-sm"
+              href="#proceso">Proceso</a></li>
+          <li><a class="text-[#F5F7FA]/50 hover:text-[#3DDC97] transition-colors duration-200 text-sm"
+              href="#proyectos">Proyectos</a></li>
+        </ul>
+      </div>
+      <div class="col-span-1">
+        <h4 class="text-[#F5F7FA] font-bold mb-6 text-sm uppercase tracking-widest">Legal</h4>
+        <ul class="space-y-4">
+          <li><a class="text-[#F5F7FA]/50 hover:text-[#3DDC97] transition-colors duration-200 text-sm" href="#">FAQ</a>
+          </li>
+          <li><a class="text-[#F5F7FA]/50 hover:text-[#3DDC97] transition-colors duration-200 text-sm"
+              href="#">Términos</a></li>
+          <li><a class="text-[#F5F7FA]/50 hover:text-[#3DDC97] transition-colors duration-200 text-sm"
+              href="#">Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="col-span-1">
+        <h4 class="text-[#F5F7FA] font-bold mb-6 text-sm uppercase tracking-widest">Social</h4>
+        <div class="flex gap-4">
+          <a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-[#F5F7FA]/50 hover:text-[#3DDC97] hover:bg-surface-container-high transition-all"
+            href="#">
+            <span class="material-symbols-outlined text-xl">share</span>
+          </a>
+          <a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-[#F5F7FA]/50 hover:text-[#3DDC97] hover:bg-surface-container-high transition-all"
+            href="#">
+            <span class="material-symbols-outlined text-xl">public</span>
+          </a>
+          <a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-[#F5F7FA]/50 hover:text-[#3DDC97] hover:bg-surface-container-high transition-all"
+            href="#">
+            <span class="material-symbols-outlined text-xl">alternate_email</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-outline-variant/10 text-center">
+      <p class="text-[#F5F7FA]/50 font-['Plus_Jakarta_Sans'] text-sm leading-relaxed">© 2024 SteelClover. Studio de
+        Diseño y Desarrollo Digital.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

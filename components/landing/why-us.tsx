@@ -3,7 +3,7 @@ import {
   Building2,
   Zap,
   Smartphone,
-  TrendingUp,
+  ShieldCheck,
 } from "lucide-react";
 
 export default async function WhyUs() {
@@ -16,8 +16,8 @@ export default async function WhyUs() {
           {t("WhyUs.title")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:auto-rows-[280px]">
-          <div className="md:col-span-8 bg-sc-surface-low rounded-[2rem] p-12 flex flex-col justify-end relative overflow-hidden group">
-            <div className="absolute top-12 right-12 opacity-10 group-hover:opacity-20 transition-opacity">
+          <div className="md:col-span-8 bg-sc-surface-low rounded-[2rem] p-12 flex flex-col justify-end relative overflow-hidden">
+            <div className="absolute top-12 right-12 opacity-10">
               <Building2 className="h-28 w-28" />
             </div>
             <h3 className="font-headline text-3xl font-bold mb-4 relative z-10">
@@ -28,8 +28,8 @@ export default async function WhyUs() {
             </p>
           </div>
 
-          <div className="md:col-span-4 bg-sc-green/10 border border-sc-green/20 rounded-[2rem] p-12 flex flex-col items-center justify-center text-center group">
-            <div className="w-20 h-20 rounded-full bg-sc-green/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <div className="md:col-span-4 bg-sc-green/10 border border-sc-green/20 rounded-[2rem] p-12 flex flex-col items-center justify-center text-center">
+            <div className="w-20 h-20 rounded-full bg-sc-green/20 flex items-center justify-center mb-6">
               <Zap className="h-9 w-9 text-sc-green" />
             </div>
             <h3 className="font-headline text-2xl font-bold mb-2 text-sc-green">
@@ -40,8 +40,8 @@ export default async function WhyUs() {
             </p>
           </div>
 
-          <div className="md:col-span-4 bg-sc-surface-high rounded-[2rem] p-12 flex flex-col justify-between group">
-            <Smartphone className="h-9 w-9 text-sc-green mb-8" />
+          <div className="md:col-span-4 bg-sc-surface-high rounded-[2rem] p-12 flex flex-col justify-between">
+            <Smartphone className="h-9 w-9 text-sc-green mb-8 shrink-0" />
             <div>
               <h3 className="font-headline text-2xl font-bold mb-2">
                 {t("WhyUs.responsiveTitle")}
@@ -52,17 +52,17 @@ export default async function WhyUs() {
             </div>
           </div>
 
-          <div className="md:col-span-8 bg-sc-surface-mid rounded-[2rem] p-12 flex items-center justify-between group overflow-hidden">
+          <div className="md:col-span-8 bg-sc-surface-mid rounded-[2rem] p-12 flex items-center justify-between overflow-hidden">
             <div className="max-w-sm">
               <h3 className="font-headline text-3xl font-bold mb-4">
-                {t("WhyUs.conversionTitle")}
+                {t("WhyUs.securityTitle")}
               </h3>
               <p className="text-sc-on-surface-variant text-lg">
-                {t("WhyUs.conversionDesc")}
+                {t("WhyUs.securityDesc")}
               </p>
             </div>
-            <div className="hidden lg:block transform translate-x-10">
-              <TrendingUp className="h-40 w-40 text-sc-surface-highest" />
+            <div className="hidden lg:block translate-x-10">
+              <ShieldCheck className="h-40 w-40 text-sc-surface-highest" />
             </div>
           </div>
         </div>
